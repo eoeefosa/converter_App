@@ -28,8 +28,8 @@ class Conversion {
   }
   
   double convert(double value, String from, String to) {
-    int nFrom = measures[from];
-    int nTo = measures[to];
+    int? nFrom = measures[from];
+    int? nTo = measures[to];
     var multiplier = formulas[nFrom.toString()][nTo];
     return value * multiplier;
   }

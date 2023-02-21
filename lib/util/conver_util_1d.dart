@@ -14,6 +14,8 @@ class Conversion {
   //builds the list containing the formulas (x + y*width)
   List<double> formulas;
   Conversion() {
+
+    
     formulas = <double>[];
     //row 1
     formulas.insert(0+0*w, 1);
@@ -90,9 +92,9 @@ class Conversion {
   }
 
   double convert(double value, String from, String to) {
-    int nFrom = measures[from];
-    int nTo = measures[to];
-    double multiplier = formulas[nTo+w*nFrom];
+    int? nFrom = measures[from];
+    int? nTo = measures[to];
+    double multiplier = formulas[nTo!+w*nFrom!];
     return value * multiplier;
   }
 }
